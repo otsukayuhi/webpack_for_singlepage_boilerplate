@@ -39,5 +39,6 @@ Webpack build assets and watch files.
 
 ### plugins and Library
 - "jquery": "^3.3.1"
+- "vue": "^2.5.16"
 - "picturefill": "^3.0.2"
 - "sanitize.css": "^5.0.0"
