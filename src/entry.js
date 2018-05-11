@@ -2,6 +2,9 @@
 import jQuery from 'jquery';
 const $ = jQuery;
 
+// vue
+import Vue from "vue";
+
 // picture要素ポリフィル
 import Picturefill from "picturefill";
 
