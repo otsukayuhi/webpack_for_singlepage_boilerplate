@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
@@ -61,8 +63,18 @@ module.exports = {
         test: /\.(gif|png|jpg|eot|wof|woff|woff2|ttf|svg)$/,
         loader: 'url-loader'
       },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/_pug/index.pug'
+    }),
+  ],
   performance: { hints: false },
   devServer: {
     contentBase: 'dist',
