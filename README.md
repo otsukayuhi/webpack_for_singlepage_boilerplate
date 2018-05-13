@@ -15,13 +15,16 @@ v8.11.1
 
 ### npm scripts
 ```dev:serve```  
-Webpack watch assets and "webpack-dev-server" start up.
+Webpack watch & build (development mode) assets and "webpack-dev-server" start up.
 
-```dev:serve```  
-Webpack watch assets.
+```dev:watch```  
+Webpack watch & build (development mode) assets.
 
-```build```  
-Webpack build assets. JavaScript source map invalid.
+```dev:build```  
+Webpack build (development mode) assets.
+
+```pro:build```  
+Webpack build (production mode) assets.
 
 ## Plugins and Library
 - "jquery": 3.3.1
