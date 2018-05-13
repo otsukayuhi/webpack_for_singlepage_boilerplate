@@ -11,34 +11,20 @@ v8.11.1
 ### Webpack
 - Babel
 - Sass (Scss) and CSS background image URL Encode.
-
-### EJS
-- "_*.ejs" file is no transpile.
+- Pug
 
 ### npm scripts
-```webpack:serve```  
-"webpack-dev-server" start up.
+```dev:serve```  
+Webpack watch assets and "webpack-dev-server" start up.
 
-```webpack:build```  
-Webpack build assets.
+```dev:serve```  
+Webpack watch assets.
 
-```webpack:watch```  
-Webpack build assets and watch files.
+```build```  
+Webpack build assets. JavaScript source map invalid.
 
-```ejs:build```  
-"*.ejs" file is transpile.
-
-```ejs:clean```  
-"dist/**/_*.html" file remove.
-
-```ejs:watch```  
-"ejs:build" task run.
-
-```start```  
-"ejs:watch" task and "webpack:serve" task run.
-
-### plugins and Library
-- "jquery": "^3.3.1"
-- "vue": "^2.5.16"
-- "picturefill": "^3.0.2"
-- "sanitize.css": "^5.0.0"
+## Plugins and Library
+- "jquery": 3.3.1
+- "vue": 2.5.16
+- "picturefill": 3.0.2
+- "sanitize.css": 5.0.0
