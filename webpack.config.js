@@ -1,8 +1,8 @@
+const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: 'production',
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
 
   entry: './src/entry.js',
   output: {
@@ -45,7 +45,7 @@ module.exports = {
             options: {
               sourceMap: true,
               plugins: [
-                require('autoprefixer')({
+                autoprefixer({
                   grid: true
                 })
               ]
@@ -72,7 +72,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/_pug/index.pug'
+      template: './src/_pug/index.pug',
+      inject: 'head'
     }),
   ],
   performance: { hints: false },
