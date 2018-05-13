@@ -1,12 +1,8 @@
 {
   "scripts": {
-    "start": "npm run ejs:watch & npm run webpack:build & npm run webpack:serve",
-    "webpack:serve": "webpack-dev-server",
-    "webpack:build": "webpack",
-    "webpack:watch": "webpack --watch",
-    "ejs:build": "ejs-cli --base-dir src/_ejs '*.ejs' --out dist/ && npm run ejs:clean",
-    "ejs:clean": "rimraf dist/**/_*.html",
-    "ejs:watch": "nodemon -e ejs -x \"npm run ejs:build \""
+    "dev:serve": "webpack --mode development --watch & webpack-dev-server",
+    "dev:watch": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "jquery": "^3.3.1",
@@ -20,10 +16,11 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.11",
-    "ejs-cli": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
-    "nodemon": "^1.17.4",
     "postcss-loader": "^2.1.5",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
