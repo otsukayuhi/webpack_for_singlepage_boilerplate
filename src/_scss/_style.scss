@@ -1,6 +1,5 @@
-.foo {
-  background: url(images/dummy.png) center center no-repeat;
+body {
+  background: url(images/dummy.png) no-repeat;
   background-size: cover;
-  color: red;
-  transform: translate(0);
+  color: #fff;
 }
