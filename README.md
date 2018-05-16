@@ -1,7 +1,7 @@
 # webpack_for_singlepage_boilerplate
 
 ## node.js version
-v8.11.1
+v8.11.2
 
 ## start
 1. npm install
