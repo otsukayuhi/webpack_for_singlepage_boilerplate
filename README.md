@@ -30,4 +30,4 @@ Webpack build (production mode) assets.
 - "jquery": 3.3.1
 - "vue": 2.5.16
 - "picturefill": 3.0.2
-- "sanitize.css": 5.0.0
+- "minireset.css": 0.0.3
