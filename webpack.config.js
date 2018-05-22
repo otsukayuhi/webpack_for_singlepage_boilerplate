@@ -1,7 +1,13 @@
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin');
+
+const MODE = 'development'; // 'development' or 'production'
+const enabledSourceMap = (MODE === 'development');
 
 module.exports = {
+  mode: MODE,
   devtool: 'inline-source-map',
 
   entry: './src/entry.js',
@@ -18,14 +24,12 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: [
-                ['env', {
-                  'modules': false
-                }]
+                ['env', {'modules': false}]
               ]
             }
           }
         ],
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.scss/,
@@ -35,7 +39,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               url: true,
-              sourceMap: true,
+              sourceMap: enabledSourceMap,
               minimize: true,
               importLoaders: 2
             },
@@ -43,7 +47,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
+              sourceMap: enabledSourceMap,
               plugins: [
                 autoprefixer({
                   grid: true
@@ -54,7 +58,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
+              sourceMap: enabledSourceMap
             }
           }
         ],
@@ -70,16 +74,31 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/_pug/index.pug',
       inject: 'head'
+    }),
+    new HtmlBeautifyPlugin({
+      config: {
+        html: {
+          indent_size: 2,
+          indent_inner_html: true,
+          unformatted: ['span']
+        }
+      },
     }),
   ],
   performance: { hints: false },
   devServer: {
     contentBase: 'dist',
     watchContentBase: true,
-    open: true
+    // host: '0.0.0.0',
+    port: 3000
   }
 };
