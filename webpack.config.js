@@ -42,7 +42,7 @@ module.exports = {
               sourceMap: enabledSourceMap,
               minimize: true,
               importLoaders: 2
-            },
+            }
           },
           {
             loader: 'postcss-loader',
@@ -53,7 +53,7 @@ module.exports = {
                   grid: true
                 })
               ]
-            },
+            }
           },
           {
             loader: 'sass-loader',
