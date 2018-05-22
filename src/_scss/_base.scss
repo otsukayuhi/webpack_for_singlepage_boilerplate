@@ -1,10 +1,20 @@
-// settings
-$color-bg-black: #242424;
-$color-font-white: #fff;
+html {
+  font-size: $font-size;
+}
 
-$font-smoothing: antialiased; //antialiased, subpixel-antialiased, none
-$font-size: 62.5%;
-$line-height: 1.4;
+body {
+  background-color: $color-main-black;
+  color: $color-main-black;
+  -webkit-font-smoothing: $font-smoothing;
+  font-smoothing: $font-smoothing;
+  font-family: $font-family;
+  -webkit-text-size-adjust: 100%;
+  line-height: $line-height;
+  word-wrap: break-word;
 
-$bp-md: 737px;
-$bp-lg: 769px;
+  min-width: 950px;
+}
+
+img {
+  vertical-align: middle;
+}

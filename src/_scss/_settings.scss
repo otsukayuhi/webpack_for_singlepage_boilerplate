@@ -1,11 +1,12 @@
 // settings
-$color-bg-black: #242424;
-$color-font-white: #fff;
+$color-main-white: #fff;
+$color-main-black: #000;
 
 $font-smoothing: antialiased; //antialiased, subpixel-antialiased, none
-$font-family: 'Prata', serif;
+$font-family: YuGothic, 'ヒラギノ角ゴ ProN W3', 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, Verdana, 'ＭＳ Ｐゴシック', sans-serif;
 $font-size: 62.5%;
 $line-height: 1.4;
+
 
 $bp-md: 737px;
 $bp-lg: 769px;
