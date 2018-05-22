@@ -1,6 +1,5 @@
-// jQuery
-import jQuery from 'jquery';
-const $ = jQuery;
+// css
+import './_scss/main.scss';
 
 // vue
 import Vue from "vue";
@@ -10,7 +9,7 @@ import Picturefill from "picturefill";
 
 // その他のJS
 import { foo } from "./_js/_foo";
-foo();
 
-// css
-import './_scss/main.scss';
+$(function(){
+  foo();
+})
